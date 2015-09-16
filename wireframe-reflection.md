@@ -2,10 +2,10 @@
 
 ##Homepage
 
-[Image of index.html wireframe](/wireframe-index.jpg)
+(/wireframe-index.JPG)
 
 ##Blog Template
 
-[Image of blog template wireframe](/wireframe-blog-index.jpg)
+(/wireframe-blog-index.JPG)
 
 Cheers!

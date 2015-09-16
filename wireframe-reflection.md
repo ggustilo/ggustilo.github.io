@@ -2,10 +2,10 @@
 
 ##Homepage
 
-(/wireframe-index.JPG)
+(/ggustilo.github.io/wireframe-index.JPG)
 
 ##Blog Template
 
-(/wireframe-blog-index.JPG)
+(/ggustilo.github.io/wireframe-blog-index.JPG)
 
 Cheers!

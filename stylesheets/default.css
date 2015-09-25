@@ -49,18 +49,11 @@ html {
 .icon {
 	list-style-type: none;
 	height: 50px;
-	margin-right: 20px;
+	margin-right: 50px;
 	display: inline-block;
 }
 
 .shadow {
-	-webkit-box-shadow: -15px 17px 18px 0px rgba(211,211,211,0.82);
-	-moz-box-shadow: -15px 17px 18px 0px rgba(211,211,211,0.82);
-	box-shadow: -15px 17px 18px 0px rgba(211,211,211,0.82);
-
-}
-
-.text-shadow {
 	text-shadow: -3px 3px #d3d3d3;
 }
 

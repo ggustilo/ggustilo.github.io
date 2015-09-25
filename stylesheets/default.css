@@ -1,38 +1,66 @@
 /*stylesheet for index.html of my website homepage */
+html {
+	height: 100%;
+
+}
 
 .background_image {
-	background-color: #022633;
-	background-size: 100%;
+	background-color: #C5E0DC;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
 	padding: 0;
 	margin: 0;
 	border: none;
 }
 
+.grad {
+	background: rgba(255,255,255,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(246,246,246,1)), color-stop(100%, rgba(197,224,220,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c5e0dc', GradientType=1 );
+}
+
 .main_nav {
-
-
+	position: relative;
+	left: 10em;
+	top: 15em;
 }
 
 .name_logo {
 	font-family: "Alex Brush" sans-serif;
-	font-size: 50pt;
+	font-size: 40pt;
 	text-decoration: none;
-
 	color: #CC1139;
-	margin: 3em;
-	float: left;
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
 .icons {
-	margin-left: 3em;
-
+	position: absolute;
+	margin: 0;
 }
 
 .icon {
 	list-style-type: none;
-	height: 100px;
-	margin: 10px;
+	height: 50px;
+	margin-right: 20px;
 	display: inline-block;
-	clear: left;
+}
+
+.shadow {
+	-webkit-box-shadow: -15px 17px 18px 0px rgba(211,211,211,0.82);
+	-moz-box-shadow: -15px 17px 18px 0px rgba(211,211,211,0.82);
+	box-shadow: -15px 17px 18px 0px rgba(211,211,211,0.82);
+
+}
+
+.text-shadow {
+	text-shadow: -3px 3px #d3d3d3;
 }
 

@@ -28,7 +28,7 @@ html {
 .main_nav {
 	position: relative;
 	left: 10em;
-	top: 15em;
+	top: 17em;
 }
 
 .name_logo {
@@ -43,7 +43,6 @@ html {
 
 .icons {
 	position: absolute;
-	margin: 0;
 }
 
 .icon {

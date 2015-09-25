@@ -5,7 +5,7 @@ html {
 }
 
 .background_image {
-	background-color: #C5E0DC;
+	background-color: #048CCC;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100%;
@@ -15,14 +15,14 @@ html {
 }
 
 .grad {
-	background: rgba(255,255,255,1);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(246,246,246,1)), color-stop(100%, rgba(197,224,220,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(197,224,220,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c5e0dc', GradientType=1 );
+	background: #ffffff;
+	background: -moz-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
+	background: -webkit-gradient(radial, 40% 40%, 0px, 40% 40%, 100%, color-stop(0%, #ffffff), color-stop(0%, #ffffff), color-stop(100%, #19b3fa));
+	background: -webkit-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
+	background: -o-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
+	background: -ms-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
+	background: radial-gradient(ellipse at 40%, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#19b3fa', GradientType=1 );
 }
 
 .main_nav {
@@ -35,7 +35,7 @@ html {
 	font-family: "Alex Brush" sans-serif;
 	font-size: 40pt;
 	text-decoration: none;
-	color: #CC1139;
+	color: #FF1E3B;
 	margin: 0;
 	padding: 0;
 	border: none;

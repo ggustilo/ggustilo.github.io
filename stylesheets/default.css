@@ -1,0 +1,38 @@
+/*stylesheet for index.html of my website homepage */
+
+.background_image {
+	background-color: #022633;
+	background-size: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.main_nav {
+
+
+}
+
+.name_logo {
+	font-family: "Alex Brush" sans-serif;
+	font-size: 50pt;
+	text-decoration: none;
+
+	color: #CC1139;
+	margin: 3em;
+	float: left;
+}
+
+.icons {
+	margin-left: 3em;
+
+}
+
+.icon {
+	list-style-type: none;
+	height: 100px;
+	margin: 10px;
+	display: inline-block;
+	clear: left;
+}
+

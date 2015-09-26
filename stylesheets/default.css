@@ -16,13 +16,13 @@ html {
 
 .grad {
 	background: #ffffff;
-	background: -moz-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
-	background: -webkit-gradient(radial, 40% 40%, 0px, 40% 40%, 100%, color-stop(0%, #ffffff), color-stop(0%, #ffffff), color-stop(100%, #19b3fa));
-	background: -webkit-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
-	background: -o-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
-	background: -ms-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
-	background: radial-gradient(ellipse at 40%, #ffffff 0%, #ffffff 0%, #19b3fa 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#19b3fa', GradientType=1 );
+	background: -moz-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #3e606f 100%);
+	background: -webkit-gradient(radial, 40% 40%, 0px, 40% 40%, 100%, color-stop(0%, #ffffff), color-stop(0%, #ffffff), color-stop(100%, #3e606f));
+	background: -webkit-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #3e606f 100%);
+	background: -o-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #3e606f 100%);
+	background: -ms-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #3e606f 100%);
+	background: radial-gradient(ellipse at 40%, #ffffff 0%, #ffffff 0%, #3e606f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3e606f', GradientType=1 );
 }
 
 .main_nav {
@@ -33,9 +33,9 @@ html {
 
 .name_logo {
 	font-family: "Alex Brush" sans-serif;
-	font-size: 40pt;
+	font-size: 35pt;
 	text-decoration: none;
-	color: #FF1E3B;
+	color: black;
 	margin: 0;
 	padding: 0;
 	border: none;

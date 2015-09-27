@@ -25,6 +25,10 @@ html {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3e606f', GradientType=1 );
 }
 
+a:hover {
+	color: #CC1139;
+}
+
 .main_nav {
 	position: relative;
 	left: 10em;
@@ -48,9 +52,17 @@ html {
 .icon {
 	list-style-type: none;
 	height: 50px;
-	margin-right: 50px;
+	margin-right: 45px;
 	display: inline-block;
 }
+
+/*.icon-word {
+	font-family: "Josefin Sans";
+	font-size: 14pt;
+	color: white;
+	list-style-type: none;
+	display: inline-block;
+}*/
 
 .shadow {
 	text-shadow: -3px 3px #d3d3d3;

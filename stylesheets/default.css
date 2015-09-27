@@ -14,7 +14,7 @@ html {
 	border: none;
 }
 
-.grad {
+.offcenter-grad {
 	background: #ffffff;
 	background: -moz-radial-gradient(40%, ellipse cover, #ffffff 0%, #ffffff 0%, #3e606f 100%);
 	background: -webkit-gradient(radial, 40% 40%, 0px, 40% 40%, 100%, color-stop(0%, #ffffff), color-stop(0%, #ffffff), color-stop(100%, #3e606f));

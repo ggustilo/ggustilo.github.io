@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Code Life</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<body class="background-image center-grad">
+	<header>
+		<A NAME ="top">
+		<nav>
+		<a href="#"><img src="../icons/previous_arrow.png" class="previous-arrow" alt="Previous"></a>
+		<a href="#"><img src="../icons/next_arrow.png" class="next-arrow" alt="Next"></a>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<h1 class="blog-title">Classes vs Ids</h1>
+		<h2 class="publish-date">September 27, 2015</h2>
+		<div class="tags">
+			<h3 class="tag"><a href="#">classes</a></h3>
+			<h3 class="tag"><a href="#">ids</a></h3>
+			<h3 class="tag"><a href="#">css</a></h3>
+			<h3 class="tag"><a href="#">best practices</a></h3>
+		</div>
+		
+		<article class="blog-content">
+			<p>In CSS, one of the best ways to style your content is to make use of classes and ids.  By incorporating a class or id attribute in a tag, you can call certain styles associated with that class selector onto your content.  For example, you might call a class of "quote" onto a paragraph - and thus designate it for indented italic styles, perhaps in a different color.  Classes are to be used more than once - creating a class of elements which are all styled the same (ex. all the quotes in your document).  Ids are used only once - when one element needs unique styles.  For example, maybe you have a particular banner image that is only used once, on the homepage of your document, and it needs a certain opacity and size.  You might give it a unique id of "homepage-banner."</p>
+
+			<p>However, CSS best practices are constantly evolving, and one new standard suggests reserving the use of ids for Javascript handles, and using only classes for CSS.  This is because Javascript also needs to use some kind of selector to work - either the element tags themselves, or a class, or ids.  The benefit of using ids exclusively for Javascript is that you can quickly scan an html file and see where Javascript is incorporated.  Although I usually follow this practice, it doesn't always fit the bill.  For example, what if you have a piece of Javascript code that needs to work on a class of elements?</p>
+
+			<p>As Javascript - and perhaps other technologies - are more commonly included in web applications and make use of CSS selectors, perhaps other tricks will evolve to more cleanly separate functionality in the document.</p>
+		</article>
+
+	</main>
+
+	<footer class="footer">
+		<h3 class="home_button"><a href="www.ggustilo.github.io">Gabrielle Gustilo</a></h3>
+		<h3 class="top_button"><a href="#top">Top</a></h3>
+		<h3 class="copyright"><a href="www.homepage.com/copyright">Copyright @ Gabrielle Gustilo 2015</a></h3>
+	</footer>
+
+</body>
+</html>

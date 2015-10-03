@@ -1,0 +1,54 @@
+.main {
+	top: 0;
+}
+
+.blog-container {
+	background-color: #F7F7F7;
+	height: 100%;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	position: fixed;	
+}
+
+.blog-title {
+	color: black;
+	margin: 3em;
+	font-weight: lighter;
+	font-size: 1.25em;
+	font-style: italic;
+}
+
+.post-titles {
+	margin: 5em;
+	list-style-type: none;
+}
+
+.post {
+	margin: 2em;
+	font-size: 1.75em;
+	font-family: "Josefin Sans" sans-serif;
+	font-style: none;
+
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.previous-arrow {
+	background-color: black;
+	padding: 1em;
+}
+
+.next-arrow {
+	background-color: black;
+	padding: 1em;
+}
+
+
+
+

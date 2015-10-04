@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Code Life</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<body class="background-image center-grad">
+	<header>
+		<A NAME ="top">
+		<nav>
+		<a href="#"><img src="../icons/previous_arrow.png" class="previous-arrow" alt="Previous"></a>
+		<a href="#"><img src="../icons/next_arrow.png" class="next-arrow" alt="Next"></a>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<h1 class="blog-title">Hashes vs Arrays</h1>
+		<h2 class="publish-date">October 4, 2015</h2>
+		<div class="tags">
+			<h3 class="tag"><a href="#">hashes</a></h3>
+			<h3 class="tag"><a href="#">arrays</a></h3>
+			<h3 class="tag"><a href="#">collections</a></h3>
+			<h3 class="tag"><a href="#">best practices</a></h3>
+		</div>
+		
+		<article class="blog-content">
+			<p>Hashes and arrays are both container objects for collections of other objects.  The objects they can contain include strings, integers, booleans, floats, other arrays or hashes, custom objects or some combination thereof.  They differ in the manner in which they store these collections.</p>
+
+			<p>Arrays are integer-indexed containers, meaning that when you add an object to an array, it is automatically given a number where it resides.  This index number is the way you access that item.  Hashes, on the other hand, are indexed using a key object.  These keys can be any type of object, although commonly a string or a symbol.</p>
+
+			<p>When you want to access an item in an array, you use the name of the array, followed by the index number.  It should be noted that arrays index items starting at the zero index, not one.  Thus, the first item is actually at 0 index, and the second item is at the 1 index.
+				<code>array[0] = "first item in the array"</code>
+
+			Now, if you wanted to find another value in the array, you would have to know at what index it was located.  Otherwise, you could call a method on the array to try and find the index.  However, I hope your values are unique or that could be tricky!
+			</p>
+
+			<p>When you want to access an item from a hash, you use the key for the value you wish to access.
+				<code>hash[:name] = "Gabrielle Gustilo"</code>
+
+			It should be noted that, although the values in a hash can be duplicated, each key in a hash must be unique.  If you try to create the same key twice, it will just overwrite the value that was associated with the key before.</p>
+
+			<p>Arrays are often used when you need to access data sequentially.  For example, if you need to perform an action on a whole collection of items, one by one.  Say, you have a to-do list, and you want to list them all out one by one, and add 'Done' to the end:
+				<code>to_do_list.each do |item|
+							item.to_s + " = Done"
+						end</code>
+
+			Hashes, on the other hand, are often used when you need to access values non-sequentially.  Say, you have a small grocery store and you need to keep track of your produce.  A hash could be used to store the type of the fruit, and how many you have left.  Let's check on oranges:
+				<code>produce["orange"] = 15</code>
+			
+			Excellent, we have plenty left.
+			</p>
+
+			<p>Generally, looking up a value in a hash is much faster than looking up a value in an array.  This is because in Ruby, hashes keep track of where they store values.  So if you use a key to ask for its value pair, the hash will be able to find it faster than if you need to search linearly through an array.  For the why, check out <a href="https://blog.engineyard.com/2013/hash-lookup-in-ruby-why-is-it-so-fast">Engine Yard</a>.</p>
+
+		</article>
+
+	</main>
+
+	<footer class="footer">
+		<h3 class="home_button"><a href="ggustilo.github.io">Gabrielle Gustilo</a></h3>
+		<h3 class="top_button"><a href="#top">Top</a></h3>
+		<h3 class="copyright"><a href="www.homepage.com/copyright">Copyright @ Gabrielle Gustilo 2015</a></h3>
+	</footer>
+
+</body>
+</html>

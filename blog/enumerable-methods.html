@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Code Life</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<body>
+	<header>
+		<A NAME ="top">
+		<nav>
+		<a href="#"><img src="../icons/previous_arrow_inverted.png" class="previous-arrow" alt="Previous"></a>
+		<a href="#"><img src="../icons/next_arrow_inverted.png" class="next-arrow" alt="Next"></a>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<h1 class="blog-title">Enumerables >> Enumerator?</h1>
+		<h2 class="publish-date">October 11, 2015</h2>
+		<div class="tags">
+			<h3 class="tag"><a href="#">enumerable</a></h3>
+			<h3 class="tag"><a href="#">enumerator</a></h3>
+			<h3 class="tag"><a href="#">Ruby</a></h3>
+		</div>
+		
+		<article class="blog-content">
+			<p>The Enumerable mixin lends its functionality to all the major container classes in Ruby - arrays, hashes, sets and ranges.  It can also be mixed in to custom classes, and is used in several standard libraries.  In order for a class to use the Enumerable mixin, it must first define an .each method, on which the enumerable methods can operate.  The purpose of the each method is to successively yield elements that can then be operated on by the enumerable methods.</p>
+			<code> def each
+				  		yield 1
+				  		yield 2
+				  		yield 3
+				  	end</code>
+
+			<p>The container classes of array, hash, set, and range all have their own version of each defined, and the enumerable methods are included in their available methods.  Of course, it is possible to override enumerable methods, and array, hash, set and range have overriden some of the enumerable methods with their own quirks.  For example, array has the .map method available to it, but it breaks out the enumerable method's functionality into two methods - one destructive, and one not.  Similarly, where the enumerable method .select normally returns an array, when called on a hash, it returns a hash.  Hash also breaks out .select's functionality into destructive and non-destructive versions, like array with .map.  Thus, it is important to make sure that you are aware of exactly what an enumerable method returns when called on a certain container, and whether or not its effects are destructive.  Although the general idea behind the methods are similar, different container objects enact them in slightly different ways.</p>
+
+			<p>Many of the enumerable functions will take a piece of your data set and operate on it in some way.  Thus, they often take an argument (perhaps to indicate how big a chunk of data you want) and a code block (where you descripe what you would like the method to do to your data).  If you call the function and pass the argument and block correctly, you will get back your data (or perhaps the remainder of the collection) according to what method you called and what code you passed it.  However, for many of the enumerable methods, if you do NOT call the requisite argument and/or code block, you will get something called an enumerator.</p>
+
+			<p>An enumerator could be described as a conveyer object.  In essence, it sits on top of your container object and (depending on the method you called) passes you chunks of data one at a time, for you to do with as you please according to that method.  An enumerator is also what you are actually using when you create method chains (see below).  The enumerator is taking pieces of data carved off or altered on the right, maybe doing something to the itself, and then passing them on to the left.</p>
+
+			<code> array_enumerator = array.map!.to_s</code>
+
+			<p>For example, in the code above, I am deliberately creating my enumerator (and naming it array_enumerator - I know, super clever) and telling it to work off of an array - essentially saying, grab pieces of this array, one at a time, and pass them to map!.  .map! in turn passes them to .to_s, which turns them into strings.  Of course, by calling .map! vs .map (no bang), I am telling .map! to turn them into strings and put them right back where they were in the original array. .map (no bang) would have created a new array to store them in, except I'm feeling a bit destructive so I want to permanently alter array's contents.</p>
+
+			<p> One of my favorite enumerable methods is the .each_slice method.  The .each_slice method take an argument and a code block.  The argument tells .each_slice how many indices to slice off (starting at 0 of course) and then .each_slice will pass (surprise!) each slice to the code block for alteration.  Perhaps all the indices will be squished together, or perhaps they will be mapped to strings like above.  Either way, super useful method.  Even better, it makes a great enumerator!  Say I know I want to slice up my array at some point soon, but I'm not quite ready yet.  I know how big the slices will be, but I'm not sure how I want to deal with them.  In this case, I can create an enumerator to sit on top of the array, in preparation to slice.</p>
+
+			<code> slicer = array.each_slice(3) </code>
+
+			<p>Later, when I know what I want to do with the slices, I can just call up slicer to hand me each slice at a time.</p>
+
+			<code> slicer.reduce(:+) </p>
+
+			<p> This would be essentially the same as saying this:</p>
+
+			<code>array.each_slice(3).reduce(:+)</code>
+
+			<p> I'm just saving myself a step by making myself a little helper.</p>
+
+		</article>
+
+	</main>
+
+	<footer class="footer">
+		<h3 class="home_button"><a href="ggustilo.github.io">Gabrielle Gustilo</a></h3>
+		<h3 class="top_button"><a href="#top">Top</a></h3>
+		<h3 class="copyright"><a href="www.homepage.com/copyright">Copyright @ Gabrielle Gustilo 2015</a></h3>
+	</footer>
+
+</body>
+</html>
+
+<!-- 
+How was it to wireframe and create an HTML page with a pair?
+Did you find wireframing to be helpful to your development process?
+What did you and your pair decide made a good wireframe? 
+What new semantic elements did you learn about (if any) ? 
+
+Wireframing with a pair was kind of weird, but it was interesting to view someone else's creative process, and I got a couple of good ideas from them.  Doing the HTML together was also somewhat helpful.  Although our wireframes looked pretty different, and we did the HTML pretty separately, we exchanged some good tips and tricks.  Overall, a good experience.
+
+I love wireframing.  I'm more of a 'quick and dirty' wireframer; although I admire people who take it to another level, and make it really artistic, it's just a quick communication tool for me most of the time.  Unless I'm doing it for a client, in which case I will try to produce something a bit more polished.
+
+My pair and I produced very different wireframes, but we came to a mutual conclusion that the wireframe should indicate the main pieces of content and how they are laid-out, without getting into too much detail.
+
+I used the article and nav tags for the first time, and learned about the address tag as well. Pretty cool.
+
+-->
+
+

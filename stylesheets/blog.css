@@ -4,7 +4,7 @@ html {
 
 }
 
-.background_image {
+/*.background_image {
 	background-color: #048CCC;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -23,7 +23,7 @@ html {
 	background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%, #ffffff 0%, #3e606f 100%);
 	background: radial-gradient(ellipse at center, #ffffff 0%, #ffffff 0%, #3e606f 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3e606f', GradientType=1 );
-}
+}*/
 
 a:link {
 	color: black;
@@ -83,14 +83,14 @@ a:visited {
 .tags {
 	position: absolute;
 	font-family: "Josefin Sans" sans-serif;
-	font-size: .75em;
+	font-size: 1em;
 	text-decoration: none;
 	font-style: italic;
 }
 
 .tag {
 	float: left;
-	margin-right: 1em;
+	margin-right: 1.5em;
 }
 
 .blog-content {
@@ -104,9 +104,10 @@ a:visited {
 	font-family: "Josefin Sans" sans-serif;
 	font-size: 8pt;
 	clear: both;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
+	background-color: white;
 }
 
 .home_button {
@@ -124,7 +125,9 @@ a:visited {
 	margin-right: 5%;
 }
 
-
+h3 {
+	font-size: 1em;
+}
 
 
 

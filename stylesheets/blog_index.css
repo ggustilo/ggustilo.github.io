@@ -1,16 +1,15 @@
 .main {
-	top: 0;
+	top: 10%;
+	font-family: "Josefin Sans" sans-serif;
+	font-size: 10pt;
 }
 
 .blog-container {
-	background-color: #F7F7F7;
 	height: 100%;
-	width: 50%;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 0;
 	margin-bottom: 0;
-	position: fixed;	
+	position: absolute;
 }
 
 .blog-title {
@@ -22,13 +21,13 @@
 }
 
 .post-titles {
-	margin: 5em;
+	margin: 3em;
 	list-style-type: none;
 }
 
 .post {
 	margin: 2em;
-	font-size: 1.75em;
+	font-size: 2.5em;
 	font-family: "Josefin Sans" sans-serif;
 	font-style: none;
 
@@ -40,12 +39,10 @@ a:hover {
 }
 
 .previous-arrow {
-	background-color: black;
 	padding: 1em;
 }
 
 .next-arrow {
-	background-color: black;
 	padding: 1em;
 }
 

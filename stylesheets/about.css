@@ -1,4 +1,12 @@
 
 .header-image {
-	
+	width: 100%;
+	float: left;
+}
+
+.main {
+	font-size: 1em;
+	left: 45%;
+	right: 5%;
+	clear: both;
 }

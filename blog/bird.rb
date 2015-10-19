@@ -1,0 +1,88 @@
+
+#This is our bird class, which will describe what a bird is and what it does (in Ruby, at least).
+
+class Bird
+	#Of course, a bird has to have certain qualities, like color, call, habitat, flying or non-flying, and favorite food.  Each type of bird might be different in this respect, so we'll make instance variables for these qualities - to make sure all birds we create have them, but to allow each bird to be different.  We will create them all in the first - initial - method to make sure they have them.  However, we will only require three mandatory things about birds to begin with- its habitat, its favorite food, and its call.  When you create a bird, at least these things have to be specified.
+
+	def initialize(habitat, fav_food, bird_call)
+		#Habitat we are given as an argument, so that's easy.
+		@habitat = habitat
+		#Same with favorite food.
+		@fav_food = fav_food
+		#Flying is important, so we will ask the creator about these things.
+		puts "Does this bird fly? True or false?"
+		answer = gets.chomp
+			if answer == "true" || "True" || "yes" || "T"
+				@fly = true
+			else @fly = false
+			end
+		#We'll hold off on color for now, so long as we know they have one.
+		@color = nil
+		@bird_call = bird_call
+	end
+
+	#Now, we should let the poor birds be able to do something, so lets create methods for flying and eating.
+
+	def eat(food)
+	#Birds can be picky though, so let's make sure that the food present is something it likes to eat.
+		if food == @fav_food
+			puts "#{@bird_call.capitalize} #{@bird_call.capitalize} chomp chomp."
+		else puts "Nope. Won't eat that."
+		end
+	end
+
+	def fly
+	#Of course, if a bird is going to fly, it has to be able to fly.  I mean, penguins don't fly.  So we better check that too.
+		if @fly == true
+			puts "We have lift off!"
+		else puts "This bird doesn't fly.  Don't be mean about it.  It's sensitive."
+		end
+	end
+
+	#Now that we have a bird class with instance variable and methods, every bird we create will have these qualities (instance variables) and behaviors (methods).
+end
+
+# So, let's make a bird!
+
+Rio = Bird.new("rainforest", "bugs", "CHIRP!")
+Rio.fly
+Rio.eat("Seeds")
+Rio.eat("bugs")
+
+#Now, if you run this program as is, there is a problem with line 30: I forgot to make bird_call an instance variable.  Instance variables are available to all methods in the class, but a local variable (and an undefined one at that) is not.  So, we have to fix that.  Add the @ sign to bird_call and rerun.  See what happens.
+
+#Now, let's say we want to be a bit more specific about our bird situation.  Rio isn't just a bird - he's a parrot.  So, let's make a sub-class of bird called parrot.  It will have all the cool qualities and behaviors of other birds, but it will also have specific cool stuff just about itself.
+
+class Parrot < Bird
+	#So, we have a bit of a conundrum here.  We want to use the same initialize method as other birds, because well parrots ARE birds and we want them to have the same qualities, BUT, we also want to make sure that parrots get to have cool colors.  So, we are going to make a special case for parrots.  The @color instance variable exists for all birds, but for parrots, we'll let it be changeable.
+	attr_accessor :color
+	#Now, we can access the parrots color and make sure he looks awesome.  But first, let's make sure he gets to have a nest too.
+	def nest
+		puts "Building a nest...."
+		sleep(1)
+		puts "Gathering materials..."
+		sleep(1)
+		puts "Voila! We're nesting!"
+	end
+
+end
+
+#Ok, now let's make Rio a parrot.  First, we have to comment out Rio as just a bird, because obviously there can be only one Rio!
+
+Rio = Parrot.new("rainforest", "bugs", "CHIRP!")
+
+#And give him a color.
+
+Rio.color = "Blue-green."
+#And let's see his color...
+puts Rio.color
+#And just test to make sure he's still a bird.
+Rio.fly
+Rio.eat("Seeds")
+Rio.eat("bugs")
+#And make sure he can nest...
+Rio.nest
+
+#Excellent.  And now, hopefully you understand that classes are super cool.  We can describe anything we want with our code.  We can create as many instances of that class as we want, and they will all have the same qualities, but uniquely their own, and the same behaviors, but modifiable.  The only sad thing is that Rio himself cannot have babies - a class instance cannot create another instance.  However, we could get around that by making Rio his own class...but no no, that's mad science.
+
+

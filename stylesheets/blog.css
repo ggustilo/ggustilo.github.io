@@ -60,9 +60,9 @@ a:visited {
 	position: absolute;
 	font-family: "Josefin Sans" sans-serif;
 	font-size: 10pt;
-	left: 25%;
+	left: 20%;
 	top: 10%;
-	width: 50%;
+	width: 65%;
 
 }
 
@@ -97,7 +97,9 @@ a:visited {
 	clear: both;
 	display: absolute;
 	font-family: "Josefin Sans" sans-serif;
-	margin-top: 10%;
+	margin-top: 7%;
+	margin-bottom: 5%;
+	width: 95%;
 }
 
 .footer {
@@ -129,5 +131,12 @@ h3 {
 	font-size: 1em;
 }
 
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
 

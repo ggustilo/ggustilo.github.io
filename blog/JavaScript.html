@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Code Life</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<body>
+	<header>
+		<A NAME ="top">
+		<nav>
+		<a href="#"><img src="../icons/previous_arrow_inverted.png" class="previous-arrow" alt="Previous"></a>
+		<a href="#"><img src="../icons/next_arrow_inverted.png" class="next-arrow" alt="Next"></a>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<h1 class="blog-title">A Tale of Two Objects</h1>
+		<h2 class="publish-date">October 23, 2015</h2>
+		<div class="tags">
+			<h3 class="tag"><a href="#">object models</a></h3>
+			<h3 class="tag"><a href="#">JavaScript</a></h3>
+			<h3 class="tag"><a href="#">Ruby</a></h3>
+			<h3 class="tag"><a href="#">classes</a></h3>
+			<h3 class="tag"><a href="#">constructors</a></h3>
+		</div>
+		
+		<article class="blog-content">
+
+			<p>One of the fundamental differences between Ruby and JavaScript is how they deal with their object model i.e. creating objects; accessing object properties; and changing object properties.  In Ruby - as a purely object-oriented language - everything is an object, and thus the creation and manipulation of objects is fundamental to understanding anything.  JavaScript, on the other hand, is a multi-paradigm language, which incorporates concepts from object-oriented programming, imperative or procedural programming, and functional programming.  Thus, in JavaScript, there are objects, but their use is not as prescribed and fundamental to the language.</p>
+
+			<p>In Ruby, objects are created as instances of a class.  The class defines the basic variables than an instance is 'born' with, as well as the methods (or actions) that the instance can call (or perform). It is worth noting that classes themselves are instance objects of the class Class, and thus there are certain variables and methods inherent to all classes. (It all gets a little self-referential - ahem, recursive - if you look too hard.)</p>
+
+			<p>Once an instance has been created, you can modify the variables and methods for that particular instance without touching the class itself.  However, for every instance object there is a class for it to model itself upon, whether that be a class you created or a simple string instance of the String class.</p>
+
+			<p>In comparison to Ruby's relatively clean system, JavaScript is much more complicated. In JavaScript, you do not need to create a custom class to define custom objects.  They can simply be created as collections of various properties whereever they are needed.  That being said, there is an inheritance mechanism in JavaScript, which can approximate the class/object/instance model in Ruby.</p>
+
+			<p>If you want to create multiple objects that behave similarly, you can do so using a constructor function.  This function provides a prototype, on which you can call 'new', just as in Ruby, to create 'instance' objects.  In fact, all objects (including custom objects) do inherit from a basic Object prototype. However, this Object prototype does not inherit any functionality itself, and unlike in Ruby, the other basic data types are not objects and don't follow the instance model.</p>
+
+			<p>Thus, you can see that, where in Ruby all strings are instances of the String class, and the String class is an instance of the class Class, which itself is an object instance of the object Object, and likewise all booleans are instances of the Boolean class, which is an instance of the class Class and so forth - in essence EVERYTHING is an object...in JavaScript, a string is (usually) just a primitive value from primitive data type string, and a boolean is a primitive value from primitive data type boolean - they cannot have properties or methods because they are NOT objects.</p>
+
+			<p>In Ruby, instantiating an object is calling a class method on a class instance to create another instance object.  In JavaScript, while there is a basic Object prototype from which objects like arrays or custom objects inherit, the means is actually a constructor function, which merely creates the proper collection of properties for that particular object.  I think this marks the biggest difference between JavaScript and Ruby - Ruby is purely object-oriented; JavaScript mixes up objects (with their associated properties and methods) with functions and procedural programming.</p>
+
+		</article>
+
+	</main>
+
+	<footer class="footer">
+		<h3 class="home_button"><a href="ggustilo.github.io">Gabrielle Gustilo</a></h3>
+		<h3 class="top_button"><a href="#top">Top</a></h3>
+		<h3 class="copyright"><a href="www.homepage.com/copyright">Copyright @ Gabrielle Gustilo 2015</a></h3>
+	</footer>
+
+</body>
+</html>
+

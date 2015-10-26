@@ -1,0 +1,63 @@
+/*<div class="projects-container">
+
+			<figure class="row col gutters-t gutters-d">
+				<a href="" class="project-link"><img src="##" alt="###" class="project-thumbnail">
+				<figcaption>Stuff about figure</figcaption></a>
+			</figure>*/
+.row {
+	display: inline-block;
+	vertical-align: top;
+	width: 43%;
+	clear: both;
+}
+
+.projects {
+	text-align: center;
+}
+
+.page-title {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: "Alex Brush";
+}
+
+p, h1 {
+	font-family: "Josefin Sans";
+	font-size: 14pt;
+}
+
+a {
+	color: black;
+	font-style: normal;
+	text-decoration: none;
+}
+
+img.project-thumbnail {
+	height: 300px;
+	width: 450px;
+	padding: 25px;
+	background-color: #F0F0F0;
+	border: 1px gray solid;
+	border-radius: 25px;
+}
+
+figcaption {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: 5em;
+	caption-side: bottom;
+	width: 75%;
+	text-align: left;
+}
+
+figure.h1 {
+	font-size: 1.5em;
+}
+
+figure.p {
+	font-size: 1em;
+}

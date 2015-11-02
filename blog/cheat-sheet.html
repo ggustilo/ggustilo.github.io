@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Code Life</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet.css">
+</head>
+
+<body>
+	<header>
+		<A NAME ="top">
+		<nav>
+		<a href="#"><img src="../icons/previous_arrow_inverted.png" class="previous-arrow" alt="Previous"></a>
+		<a href="#"><img src="../icons/next_arrow_inverted.png" class="next-arrow" alt="Next"></a>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<section class="titles">
+			<h1 class="blog-title">JavaScript vs Ruby: A Refresher</h1>
+			<h2 class="publish-date">November 1, 2015</h2>
+			<div class="tags">
+				<h3 class="tag"><a href="#">JavaScript</a></h3>
+				<h3 class="tag"><a href="#">Ruby</a></h3>
+				<h3 class="tag"><a href="#">cheat sheet</a></h3>
+			</div>
+		</section>
+		
+		<section class="columns">
+			<div class="left-column">
+				<h1 class="language-title">JavaScript</h1>
+				<h2 class="term">Data Types</h2>
+					<p>JavaScript is a loosely typed language, so data types do not have to be declared explicitly.  There are several primitive data types - boolean, null, undefined, number, string, and symbol.  In addition,  JavaScript has the dynamic data type - object.  The number data type includes both integers and decimals or floats, and JavaScript will treat all numbers as decimals, regardless of whether or not they are typed as such.  JavaScript does support some methods for its primitive data types.</p>
+				<h2 class="term">Operators</h2>
+					<p>JavaScript uses the standard operators: = (assignment), >, <, >=, <=, +, -, /, *, %, !=.  Of note: JavaScript does not have shovel operators (<< and >>) for addition and subtraction.  Also, the comparator operator is a triple equal sign ===, not a double.  Also, you cannot use operators on differing data types, e.g. 16 * 'hello'.</p>
+				<h2 class="term">Destructive Methods</h2>
+					<p>JavaScript does not use destructive methods in general - a new object is always returned.  However, JavaScript will evaluate expressions that modify an object even when it is the condition in an 'if' statement, and even if the result is assigned to a new variable.</p>
+				<h2 class="term">Keywords</h2>
+					<p>JavaScript uses standard keywords.  Of note: 'var' must be used to declare variables, and will preceed the variable name.  Otherwise, the variable will be considered global, and will have global scope. 'new' and 'delete' should also go before the name of the new or deleted object, not following and not using dot notation.  Also, for conditions, JavaScript uses the keyword 'else if' and does not have 'unless'.</p>
+				<h2 class="term">Variable Naming</h2>
+					<p>JavaScript conventionally uses turtleCase.</p>
+				<h2 class="term">String Interpolation</h2>
+					<p>There is no string interpolation in JavaScript.  I.e. "this is a string with a #{variable}" is not viable.  You must use + signs or another method to include variables in strings.</p>
+				<h2 class="term">Return Values</h2>
+					<p>There are no implicit return values for JavaScript functions.  If you wish a function to return a particular value, this needs to be explictly coded.  Also, the return function will act as a 'break' in the function, and any code past the return statement will not be evaluated.  JavaScript may throw a 'not a function' error if there is no return value.</p>
+				<h2 class="term">Indexing</h2>
+					<p>You cannot use a negative index number to access values starting at the end of an array, e.g. array[-1].  Unless explictly set, negative index values do not have meaning.  Also note: arrays in JavaScript do not have supported methods for first, last or empty.</p>
+				<h2 class="term">Object Structures</h2>
+					<p>JavaScript has an object data type, which groups together key-value pairs and which supports prototyping.  A key in a JavaScript object is called a property, and all properties are evaluated as strings, regardless of whether or not they are in quotation marks.  Property values in a JavaScript object can be any primitive data type, another object, or a function.  JavaScript objects can be created anywhere, and are implicitly open to access from another object or function.</p>
+				<h2 class="term">Loops</h2>
+					<p>JavaScript supports 'for', 'do', and 'while' loops.  The iteration syntax can either be spelled out with start and end points and iteration step, i.e. for (var i = 0; i < object.length; i++) {}, or can be simplified with the assumption of starting at the beginning, iterating until the end, and making one step at a time, using 'for (i in object) {}'.  Parentheses are always necessary for the loop conditions, and semicolons are used to separate terms.</p>
+				<h2 class="term">Callback Functions</h2>
+					<p>JavaScript supports the use of callback functions, i.e. functions passed to other functions as arguments.  They are often used as an effect, commenced when the main function evaluates to a particular value, or detects a certain action (for example, a mouse click).</p>
+			</div>
+
+			<div class="right-column">
+				<h1 class="language-title">Ruby</h1>
+				<h2 class="term">Data Types</h2>
+					<p>Ruby is a pure object-oriented language.  Thus, its data types are all defined as objects, including boolean, nil, etc.  Ruby has a large standard library of methods for use on its supported object instances - include string, nil, boolean, etc.
+				<h2 class="term">Operators</h2>
+					<p>Ruby uses the standard operators: = (assignment), >, <, >=, <=, +, -, /, *, %, !=.  The comparator operator is a double equal sign ==, although the triple equal sign exists for strict comparison.  Ruby also allows shovel operators (<< and >>) for addition and subtraction, and will try to evaluate the use of operators on mixed data types.  Order is important for a valid expression; the term on the right is applied to the term on the left.</p>
+				<h2 class="term">Destructive Methods</h2>
+					<p>Ruby has both destructive and non-destructive methods.  Although not a hard rule, most destructive methods (unless obviously named to indicate destructiveness) have a 'bang' or ! at the end, e.g. 'map!'</p>
+				<h2 class="term">Keywords</h2>
+					<p>Ruby uses the standard keywords.  Of note: there is no declarative variable keyword.  Also, conditionals use the keyword 'elsif' to designated alternative paths.  Ruby also has 'unless' as a loop option.</p>
+				<h2 class="term">Variable Naming</h2>
+					<p>Ruby conventionally uses snake_style for variables.</p>
+				<h2 class="term">String Interpolation</h2>
+					<p>Ruby allows string interpolation, i.e. "this #{variable} is allowed", and will even evaluate methods used within the curly brackets.</p>
+				<h2 class="term">Return Values</h2>
+					<p>Ruby will automatically return the last evaluated expression in a function.  If a return statement is used in a function, it will act as a 'break' and the function will not be evaluated past the return.</p>
+				<h2 class="term">Indexing</h2>
+					<p>Ruby will evaluate negative index numbers for an array - they will count from the end of the array.  I.e. array[-1] will be the last item of an array.  Ruby also has methods to access the first and last items in an array, and to check if the array is empty.</p>
+				<h2 class="term">Object Structures</h2>
+					<p>As a pure object-oriented language, everything in Ruby is an object, which possesses attributes and supported object methods.  These attributes are essentially key value pairs, and can be accessed via method calls.  Custom objects can be created in Ruby via the creation of a custom class, and then creating a new instance of that custom class.  Every object must be an instance of a class, and classes themselves are instances of the class object.</p>
+				<h2 class="term">Loops</h2>
+					<p>Ruby supports 'for', 'do', 'while', and 'unless' loops.  The loop conditions are generally simple, e.g. 'for i in object', and do not require the use of parentheses for evaluation.  Commas can be used to separate expressions if necessary.</p>
+				<h2 class="term">Callback Functions</h2>
+					<p>As a block of code which is passed to a method as an argument, callback functions are generally not necessary in Ruby, as their effects can be acheived otherwise.</p>
+			</div>	
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<h3 class="home_button"><a href="ggustilo.github.io">Gabrielle Gustilo</a></h3>
+		<h3 class="top_button"><a href="#top">Top</a></h3>
+		<h3 class="copyright"><a href="www.homepage.com/copyright">Copyright @ Gabrielle Gustilo 2015</a></h3>
+	</footer>
+
+</body>
+</html>
+
+
+

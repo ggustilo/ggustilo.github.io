@@ -1,0 +1,43 @@
+.titles {
+	margin-bottom: 5%;
+}
+
+.left-column {
+	width: 40%;
+	float: left;
+	/*margin-right: 55%;*/
+	padding: 2em;
+}
+
+.right-column {
+	width: 40%;
+	float: right;
+	padding: 2em;
+}
+
+.language-title {
+	margin: auto;
+	text-align: center;
+	font-size: 1.5em;
+
+}
+
+.term {
+	font-size: 1em;
+	font-weight: bolder;
+	font-color: #CC1139;
+
+}
+
+.columns {
+	border: 1px solid gray;
+	/*box-shadow: -3px 3px #d3d3d3;*/
+
+}
+
+.columns p {
+	background-color: #F7F7F7;
+	padding: 1em;
+	font-family: "Times New Roman";
+	line-height: 1.5;
+}

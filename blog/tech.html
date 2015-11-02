@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Code Life</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<body>
+	<header>
+		<A NAME ="top">
+		<nav>
+		<a href="#"><img src="../icons/previous_arrow_inverted.png" class="previous-arrow" alt="Previous"></a>
+		<a href="#"><img src="../icons/next_arrow_inverted.png" class="next-arrow" alt="Next"></a>
+		</nav>
+	</header>
+
+	<main class="main">
+
+		<h1 class="blog-title">NoSQL: Life After SQL</h1>
+		<h2 class="publish-date">October 31, 2015</h2>
+		<div class="tags">
+			<h3 class="tag"><a href="#">NoSQL</a></h3>
+			<h3 class="tag"><a href="#">back-end</a></h3>
+			<h3 class="tag"><a href="#">non-relational database</a></h3>
+		</div>
+		
+		<article class="blog-content">
+			
+			<p>Relational databases are the traditional way of storing and accessing data, and many organizations are firmly invested in relational infrastucture.  With SQL (Structured Query Language) - developed at IBM in the 1970s - relational databases can be reliably queried and updated.  The data will remain consistent, and the entire structure will follow the predetermined organizational scheme.  These three qualities: consistency, a well-known and  supported language, and an invested community are three main reasons why relational databases are such a strong option for data management.</p>
+
+			<p>However, our demands on technology are ever-increasing, and the requirements for data management are changing.  In particular, with such massive data-heavy applications as Facebook, Amazon and Twitter, it becomes very difficult to scale a tradional relational database.  For example, if you think about the kind of database you might need for a small application, it is likely that the whole database will be hosted on one server.  You can read information from that server and write information back to that server.  But now imagine how your database grows as your application becomes popular. Soon, it won't fit on one server.  Now you need two or three.  But how to split up the data between all three servers?  A few tables on one, a few tables on another, and you need to make sure that when you try to update the data, you are sending the update to the right server.  But now you need 5, 6, 7, 10, 20 servers, and large load-balancing software to manage requests and updates...its starting to get expensive to maintain.</p>
+
+			<p>Now what happens when your users request a new feature for your application?  They want you to record their preferences and tailor their experience with your product.  But you didn't anticipate this.  You will need to add a few hundred new fields to different tables and relink things...then you will have to update all the old data you've already got to take into account these new fields and tables...Relational databases need to be thought out ahead of time for an expected number of fields, to hold certain information.  It is difficult to update them once they are active, and may require a lot of downtime.  For agile development and fast prototyping, relational databases are just too clunky.</p>
+
+			<p>On top of that, what happens when you not only have so much data, but it starts becoming a different type of data?  No longer are there just names and addresses, prices and text descriptions.  Now we need to record relationships - whole networks.  We need to store groups of data together that are not really related in the tradional sense.  We need to store new types of data.  Not only do relational databases require that you specify data types for its fields ahead of time, but they are made for data that <em>relates</em> in a particular way.  If those relationships don't make sense for your data, then another type of structure may be preferable.</p>
+
+			<p>What do we do when we have new types of data - a LOT of it - and we still need performance? Reliability? Consistency?</p>
+
+			<p>NoSQL bascially refers to any type of database that is not a strictly relational database; its a sort of blanket term.  There are many different options, and they have various levels of support and usability.  In general, three large groups can be identified: document databases such as MongoDB, graph databases such as HyperGraphDV, and key-value databases such as Apache Cassandra.</p>
+
+			<p>Document databases group information in documents, and specialize in holding many different data types in any given document.  Graph databases specialize in recording relationships, or any other type of data that can be intuitively displayed as a graph.  Key-value databases - essentially hash or dictionary databases - specialize in quick lookups via key-value pairs.  They all have their strengths and weaknesses, depending on your data management needs, and often they will be combined with a SQL database in some manner to increase functionality.</p>
+
+			<p>In general, non-relational databases are built to be scalable and to handle many different data types.  They do so at the expense of consistency.  The goal for any database is total consistency - when you request information (a read), you want that information to be accurate.  When you update information (a write), you want that information to immediately be readable - from anywhere.  This can be difficult when a database is set up on multiple servers, maybe in multiple replications.  Thus, some NoSQL databases shoot for eventual consistency, as in the data will eventually be propogated across the entire database - just not immediately.  This might be fine if you have a lot of writes, and you can store them all up and propogate them across the whole database once an hour or once a day. But it might not be ok if you are - say - Facebook (which uses Cassandra, btw).</p>
+
+			<p>In addition to consistency concerns, not all NoSQL databases have a very easy interface - there is no SQL that everyone knows, and which may come in a few different flavors, but is ultimately the same language.  Thus, the learning curve may be rather steep for some.  In addition, because most NoSQL databases are open-source, they are not consistent in their implementation and support.  It's never a good idea to build on technology that will be abandoned and obsolete in the next five years.</p>
+
+			<p>In conclusion, non-relational databases may be a good option depending on your database needs, but the quality and community of products are inconsistent and need to be carefully vetted before they are adopted.  Ultimately, it comes down to who are you? what are you building? what type of data do you need to store? how fast will you need to adapt? and what are you willing to trade?</p>
+
+		</article>
+
+	</main>
+
+	<footer class="footer">
+		<h3 class="home_button"><a href="ggustilo.github.io">Gabrielle Gustilo</a></h3>
+		<h3 class="top_button"><a href="#top">Top</a></h3>
+		<h3 class="copyright"><a href="www.homepage.com/copyright">Copyright @ Gabrielle Gustilo 2015</a></h3>
+	</footer>
+
+</body>
+</html>
+
+

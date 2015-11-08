@@ -1,18 +1,22 @@
+.main {
+	font-size: 10pt;
+}
+
 .titles {
 	margin-bottom: 5%;
+
 }
 
 .left-column {
 	width: 40%;
 	float: left;
-	/*margin-right: 55%;*/
-	padding: 2em;
+	padding: 5%;
 }
 
 .right-column {
 	width: 40%;
 	float: right;
-	padding: 2em;
+	padding: 5%;
 }
 
 .language-title {
@@ -30,9 +34,7 @@
 }
 
 .columns {
-	border: 1px solid gray;
-	/*box-shadow: -3px 3px #d3d3d3;*/
-
+	
 }
 
 .columns p {

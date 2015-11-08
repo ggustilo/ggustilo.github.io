@@ -30,9 +30,9 @@ a:hover {
 }
 
 .main_nav {
-	position: relative;
-	left: 10em;
-	top: 17em;
+	position: absolute;
+	left: 15%;
+	top: 40%;
 }
 
 .name_logo {

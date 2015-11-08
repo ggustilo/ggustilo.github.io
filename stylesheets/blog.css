@@ -42,9 +42,10 @@ a:hover {
 
 }
 
-.titles {
-	/*margin-bottom: 2%;*/
-	border-bottom: 1px solid gray;
+.titles::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .blog-title {
@@ -66,12 +67,20 @@ a:hover {
 	font-size: 1em;
 	text-decoration: none;
 	font-style: italic;
+	height: 100%;
+	border-bottom: 1px solid gray;
+}
+
+.tags::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .tag {
 	float: left;
 	margin-right: 1.5em;
-	margin-bottom: 1em;
+	margin-bottom: .5em;
 }
 
 .blog-content {
